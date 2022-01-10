@@ -1,7 +1,7 @@
 name: status_stepper
 description: A Status Stepper project.
 version: 1.0.0
-homepage:
+homepage: https://github.com/Progressive-Mobile/status_stepper.git
 
 environment:
   sdk: ">=2.15.1 <3.0.0"
