@@ -1,0 +1,9 @@
+.example/DS_Store
+.example/dart_tool/
+
+.example/packages
+.example/pub/
+
+example/build/
+
+.example/idea/
