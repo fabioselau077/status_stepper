@@ -28,7 +28,8 @@ class StepperItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return ClipOval(
       child: Container(
-        color: disabledColor ?? Theme.of(context).colorScheme.secondaryVariant,
+        color:
+            disabledColor ?? Theme.of(context).colorScheme.secondaryContainer,
         child: Stack(
           children: [
             FutureBuilder(
@@ -43,7 +44,9 @@ class StepperItem extends StatelessWidget {
                 ),
                 switchInCurve: curve,
                 duration: animationDuration,
-                child: isPassed && snapshot.connectionState == ConnectionState.done || !shouldRedraw
+                child: isPassed &&
+                            snapshot.connectionState == ConnectionState.done ||
+                        !shouldRedraw
                     ? Container(
                         color: activeColor ?? Theme.of(context).primaryColor,
                         alignment: Alignment.centerLeft,
