@@ -23,7 +23,7 @@ class StatusStepper extends StatelessWidget {
   ///Color of active and passed statuses, by default is Theme.of(context).primaryColor
   final Color? activeColor;
 
-  ///Color of next statuses, by default is Theme.of(context).colorScheme.secondaryVariant
+  ///Color of next statuses, by default is Theme.of(context).colorScheme.secondaryContainer
   final Color? disabledColor;
 
   ///Curve for the connectors
@@ -52,7 +52,8 @@ class StatusStepper extends StatelessWidget {
   Widget build(BuildContext context) {
     final _children = <Widget>[];
     for (var index = 0; index < children.length; index++) {
-      final delayFactor = index - lastActiveIndex > 1 ? index - lastActiveIndex - 1 : 0;
+      final delayFactor =
+          index - lastActiveIndex > 1 ? index - lastActiveIndex - 1 : 0;
       final isNotCurrentIndex = currentIndex != lastActiveIndex;
       _children.addAll(
         [
@@ -61,7 +62,8 @@ class StatusStepper extends StatelessWidget {
               animationDuration: animationDuration,
               isPassed: index <= currentIndex,
               shouldRedraw: index > lastActiveIndex,
-              delayFactor: delayFactor * 2 - (!isNotCurrentIndex && delayFactor > 0 ? 1 : 0),
+              delayFactor: delayFactor * 2 -
+                  (!isNotCurrentIndex && delayFactor > 0 ? 1 : 0),
               animationAwaitDuration: animationDelayDuration,
               activeColor: activeColor,
               disabledColor: disabledColor,

@@ -13,7 +13,7 @@ animationDelayDuration    | Duration before starting animation
 currentIndex    | Current status index, -1 if there are no  active items
 lastActiveIndex    | Animation starts after widget at this position 
 activeColor    | Color of active and passed statuses, by default is Theme.of(context).primaryColor 
-disabledColor    | Color of next statuses, by default is Theme.of(context).colorScheme.secondaryVariant 
+disabledColor    | Color of next statuses, by default is Theme.of(context).colorScheme.secondaryContainer 
 connectorCurve    | Curve for the connectors
 itemCurve    | Curve for the status widgets
 connectorThickness    | Thickness of the connector 

@@ -31,7 +31,8 @@ class StepperConnector extends StatelessWidget {
         children: [
           Divider(
             thickness: connectorThickness,
-            color: disabledColor ?? Theme.of(context).colorScheme.secondaryVariant,
+            color: disabledColor ??
+                Theme.of(context).colorScheme.secondaryContainer,
           ),
           FutureBuilder(
             future: Future.delayed(
@@ -45,7 +46,9 @@ class StepperConnector extends StatelessWidget {
                 axis: Axis.horizontal,
               ),
               duration: animationDuration,
-              child: isPassed && snapshot.connectionState == ConnectionState.done || !shouldRedraw
+              child: isPassed &&
+                          snapshot.connectionState == ConnectionState.done ||
+                      !shouldRedraw
                   ? Divider(
                       thickness: connectorThickness,
                       color: activeColor ?? Theme.of(context).primaryColor,
